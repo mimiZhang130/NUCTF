@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #ab8ad2;
+  --tertiary-color: #ffea00;
+}
+
+* {
+  font-family: 'Abel', sans-serif;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+li{
+  font-size: 1.2rem;
+}
+
+.nav-item{
+  padding: .5rem;
+  --bs-nav-link-color: var(--primary-color);
+  --bs-nav-underline-link-active-color: var(--secondary-color);
+  --bs-nav-link-hover-color: var(--secondary-color);
+}
+
+.container{
+  padding: 2rem;
+}
+
+.bodyText{
+  padding: .5rem 2rem 2rem;
+}
+
+.inline-flex{
+  display: flex;
+  flex-direction: row;
+}
