@@ -30,7 +30,7 @@ const Home = () => {
             <h1>Find Us</h1>
             <div className="bodyText">
                 <Socials icon="../src/assets/socials/email.svg" text="Email Us: ctfteam@u.northwestern.edu" link="mailto:ctfteam@u.northwestern.edu"/>
-                <Socials icon="../src/assets/socials/instagram.svg" text="Instagram:" link="/"/>
+                <Socials icon="../src/assets/socials/instagram.svg" text="Instagram: nu_ctf" link="https://www.instagram.com/nu_ctf/"/>
                 <Socials icon="../src/assets/socials/github.svg" text="Github:" link="/"/>
                 <Socials icon="../src/assets/socials/ctf.svg" text="CTFTime:" link="/"/>
                 <Socials icon="../src/assets/socials/wildcat.svg" text="Wildcat Connection: CTF Team" link="https://northwestern.campuslabs.com/engage/organization/ctfteam"/>

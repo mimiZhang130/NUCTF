@@ -1,0 +1,52 @@
+{
+    "title": "FunnyLogin WriteUp",
+    
+    "content": [
+      {
+        "header": "Website Interface",
+        "content-type": "image",
+        "content": [
+            {
+                "id": 0,
+                "content-type": "image",
+                "text": "img_source"
+            }
+        ]
+      },
+      {
+        "header": "Getting Started",
+        "content": [
+            {
+                "id": 0,
+                "content-type": "text",
+                "text": "So we have a typical login setup here where the user inputs a username and a password. Let’s jump to the source code and take a look at what they are checking for."
+            },
+            {
+                "id": 1,
+                "content-type": "text",
+                "text": "On lines 29-30, we can see the SQL query being sent to the web server where the user inputs two values – the username (user) and password (pass) – with no string sanitization"
+            },
+            {
+                "id": 2,
+                "content-type": "code",
+                "text": "const { user, pass } = req.body;\nconst query = `SELECT id FROM users WHERE username = '${user}' AND password = '${pass}';`;"
+            },
+            {
+                "id": 3,
+                "content-type": "text",
+                "text": "This suggests a possible SQLi attack."
+            },
+            {
+                "id": 3,
+                "content-type": "text",
+                "text": "This suggests a possible SQLi attack."
+            },
+            {
+                "id": 3,
+                "content-type": "text",
+                "text": "This suggests a possible SQLi attack."
+            },
+        ]
+      }
+    ]
+  }

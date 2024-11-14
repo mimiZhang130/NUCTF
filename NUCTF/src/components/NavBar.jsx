@@ -3,8 +3,6 @@ import React from 'react'
 
 const NavBar = ({page}) => {
     function isActive(pageName) {
-        console.log(page)
-        console.log(pageName)
         return page === pageName ? "nav-link active" : "nav-link"
     }
   return (
