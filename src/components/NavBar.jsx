@@ -9,7 +9,7 @@ const NavBar = ({page}) => {
     <div>
         <nav className="navbar" style={{ backgroundColor: "white", borderBottom: "solid .25rem var(--secondary-color)" }}>
             <a className="navbar-brand" href="/">
-                <img src="src/assets/NUCTF_Logo.png" alt="Bootstrap" width="350" height="100%"/>
+                <img src="/assets/NUCTF_Logo.png" alt="Bootstrap" width="350" height="100%"/>
             </a>
             <ul className="nav nav-underline justify-content-end" style={{marginRight: "7%"}}>
                 <li className="nav-item">
