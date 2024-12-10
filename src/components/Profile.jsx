@@ -1,6 +1,6 @@
 import React from 'react'
 import TeamSocials from "./TeamSocials"
-const Profile = () => {
+const Profile = ({name, role, email, github}) => {
   return (
         <div className="profile-container">
             <div className="profile-image">
@@ -8,13 +8,13 @@ const Profile = () => {
             </div>
             <div className="profile-text">
                 <div className="profile-name">
-                    <b><h1>Mimi :D</h1></b>
-                    <p>Co-president</p>
+                    <b><h1>{name}</h1></b>
+                    <p>{role}</p>
                 </div>
                 <br></br>
                 <div className="profile-socials">
-                    <TeamSocials icon="/assets/socials/email.svg" link="mailto:MimiZhang2027@u.northwestern.edu"/>
-                    <TeamSocials icon="/assets/socials/github.svg" link="https://github.com/mimiZhang130"/>
+                    <TeamSocials icon="/assets/socials/email.svg" link={email}/>
+                    <TeamSocials icon="/assets/socials/github.svg" link={github}/>
                 </div>
             </div>
         </div>

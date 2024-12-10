@@ -6,6 +6,8 @@ import Resources from "./Resources";
 import Blog from "./Blog";
 import Writeup from "./components/Writeup"
 
+import writeups from "./assets/Writeups.json";
+
 function App() {
   return (
     <div>
@@ -13,7 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/writeups" element={<Writeups/>}/>
-        <Route path="/writeups/FunnyLogin" element={<Writeup title="FunnyLogin CTF" date="11/25/2023" source="../../src/assets/FunnyLogin.pdf"/>}/>
+        { writeups.map((writeup, index) => (
+            <Route key={index} path={"/writeups/" + writeup.title} element={<Writeup title={writeup.title} date={writeup.date} source={writeup.source}/>}/>
+        ))}
+        
         <Route path="/team" element={<Team/>}/>
         <Route path="/resources" element={<Resources/>}/>
         <Route path="/blog" element={<Blog/>}/>

@@ -86,6 +86,14 @@ li{
   align-items: center;
 }
 
+.writeup-pdf-display{
+  width: 70%;
+  /* border: none; */
+  margin: 20px auto;
+}
+
+
+/* profiles */
 .all-profiles-container{
   display: flex;
   flex-direction: row;
@@ -141,6 +149,9 @@ li{
   }
   .writeup-button{
     width: 50%;
+  }
+  .writeup-pdf-display{
+    width: 90%;
   }
 }
 

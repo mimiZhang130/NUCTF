@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import Profile from './components/Profile'
+import people from './assets/Team.json'
 const Team = () => {
   return (
     <div>
@@ -9,8 +10,9 @@ const Team = () => {
         <h1 className="header">Meet the Team</h1>
 
         <div className="all-profiles-container">
-          <Profile/>
-          <Profile/>
+          {people.map((person, index) => (
+            <Profile name={person.name} role={person.role} email={person.email} github={person.github}></Profile>
+          ))}
         </div>
     </div>
   )
