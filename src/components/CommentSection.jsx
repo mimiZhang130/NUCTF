@@ -30,9 +30,6 @@ const CommentSection = () => {
         setName('');
         setEmail('');
         setComment('');
-
-        // Reload the page to fetch updated comments
-        window.location.reload(); 
     }
 
 

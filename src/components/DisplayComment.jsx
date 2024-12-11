@@ -26,7 +26,7 @@ const DisplayComment = () => {
     return (
         <div style={{display:"flex", alignItems:"flex-start", flexDirection: "column"}}>
             {comments.map((comment, index) => (
-                <Comment name={comment.name} comment={comment.comment} />
+                <Comment key={index} name={comment.name} comment={comment.comment} timestamp={comment.timestamp}/>
             ))}
         </div>
     )
