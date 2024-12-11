@@ -1,4 +1,5 @@
 import React from 'react'
+import CommentSection from './CommentSection'
 
 const Writeup = ({title, date, source}) => {
 
@@ -9,6 +10,9 @@ const Writeup = ({title, date, source}) => {
             <h1 style={{margin: "0 2rem"}}>{title}</h1>
             <p>Last Updated: {date}</p>
             <iframe height="600rem" className="writeup-pdf-display" allowFullScreen loading="lazy" src={source}></iframe>
+            <br></br>
+            <h2>Comments</h2>
+            <CommentSection />
         </div>
     </div>
     

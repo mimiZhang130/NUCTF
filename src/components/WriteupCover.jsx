@@ -5,7 +5,7 @@ const WriteupCover = ({title, tags}) => {
     const navigate = useNavigate();
     return (
         <button className="writeup-button" onClick={() => {navigate('/writeups/' + title)}}>
-            <h3>FunnyLogin Writeup</h3>
+            <h3>{title + " Writeup"}</h3>
             <div className="writeup-tags">
                 {tags.map((tag, index) => (
                     <span className="writeup-tag">{tag}</span>
