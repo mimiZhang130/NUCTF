@@ -8,31 +8,36 @@ const CommentSection = () => {
     const [email, setEmail] = useState('')
     const [comment, setComment] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent page reload
+    const handleSubmit = async (e) => {
+        try{
+            e.preventDefault(); // Prevent page reload
 
-        // create comment
-        const postComment = {
-                                articleID: "FunnyLogin",
-                                name: name,
-                                email: email,
-                                comment: comment
-                            };
-        
-        // do post request                            
-        axios.post('https://ko5c1qpq92.execute-api.us-east-2.amazonaws.com/prod/add_comment', 
-                    postComment, 
-                    {headers: {'Content-Type': 'application/json'}})
-                    .then(response => console.log("Response:", response.status))
-                    .catch(error => console.error("Error:", error));
+            // create comment
+            const postComment = {
+                                    articleID: "FunnyLogin",
+                                    name: name,
+                                    email: email,
+                                    comment: comment
+                                };
+            
+            // do post request                            
+            await axios.post('https://ko5c1qpq92.execute-api.us-east-2.amazonaws.com/prod/add_comment', 
+                        postComment, 
+                        {headers: {'Content-Type': 'application/json'}})
+                        .then(response => console.log("Response:", response.status))
+                        .catch(error => console.error("Error:", error));
+    
+            // clear fields
+            setName('');
+            setEmail('');
+            setComment('');
 
-        // clear fields
-        setName('');
-        setEmail('');
-        setComment('');
-    }
-
-
+            // Reload the page
+            window.location.reload();
+        } catch (error) {
+            console.error('Failed to post comment:', error);
+        }
+    };
 
     return (
         <div className="comment-section">

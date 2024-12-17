@@ -23,8 +23,11 @@ const Home = () => {
             </div>
 
             <h1>Club Activities</h1>
-            <div className="bodyText">
+            <div className="bodyText hide-small-screen">
                 <iframe src="https://calendar.google.com/calendar/embed?src=c_20cd39bcb23a160503db860faf0b0f7f28a23a0bcbe4c2b08e6076512f3993d0%40group.calendar.google.com&ctz=America%2FChicago" style={{border: "0"}} width="800" height="600"></iframe>
+            </div>
+            <div className="bodyText show-small-screen">
+                <p>First meeting on 1/9 @ 5pm in Tech!</p>
             </div>
 
             <h1>Find Us</h1>
